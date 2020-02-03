@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tugas</title>
+    <script defer src="tugas1.js"></script>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse: collapse;
+            margin: 5px;
+            height: 50px;
+        }
+        td{
+            height: 50px;
+        }
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<center>
+    <table>
+        <thead>
+            <th>Form Product</th>
+            <th>Form Hewan</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div>
+                        <form id="formProduct">
+                            <p>&nbsp;&nbsp;Nama : <input type="text" id="nameP">&nbsp;&nbsp;</p>
+                            <p>Harga : <input type="number" id="priceP"></p>
+                            <p>Kategori :
+                                <select id="category">
+                                    <option value="elektronik">Elektronik</option>
+                                    <option value="Pakaian">Pakaian</option>
+                                    <option value="Otomotif">Otomotif</option>
+                                </select>
+                            </p>                            
+                            <p>Kondisi :
+                                <input type="radio" name="condition" value="new"> Baru
+                                <input type="radio" name="condition" value="old"> Second
+                            </p>                            
+                            <input type="button" value="Tambahkan" onclick="addNewProduct()">
+                            <br>
+                            &nbsp;&nbsp;     
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <form id="formAnimal">
+                            <p>&nbsp;&nbsp;Nama : <input type="text" id="nameA">&nbsp;&nbsp;</p>                            
+                            <p>Usia : <input type="number" id="usiaA"></p>
+                            <p>Kelamin :
+                                <input type="radio" name="gender" value="Jantan"> Jantan
+                                <input type="radio" name="gender" value="Betina"> Betina
+                            </p>                            
+                            <p>Status : 
+                                <input type="radio" name="stat" value="Liar"> Liar
+                                <input type="radio" name="stat" value="Peliharaan"> Peliharaan
+                            </p>                            
+                            <input type="button" value="Tambahkan" onclick="addNewAnimal()">
+                            <br>
+                            &nbsp;&nbsp;
+                        </form>
+                    </div>
+                </td>
+
+            </tr>    
+        </tbody>
+    </table>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Product</th>
+                <th>Data Animals</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;Nama&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Harga&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Kategori&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Kondisi&nbsp;&nbsp;&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hasilProduk">
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;Nama&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Usia&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Kelamin&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;Status&nbsp;&nbsp;&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hasilBinatang">
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+</center>
+</body>
+</html>
